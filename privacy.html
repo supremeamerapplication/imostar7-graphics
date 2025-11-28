@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - IMOSTAR7 Design Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4CAF50;
+            --secondary: #2196F3;
+            --accent: #03A9F4;
+            --light: #F8F9FA;
+            --dark: #2D2D2D;
+            --text-color: #2D2D2D;
+            --body-bg: #FFFFFF;
+            --card-bg: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --radius: 12px;
+        }
+
+        body.dark-mode {
+            --primary: #388E3C;
+            --secondary: #1976D2;
+            --accent: #0288D1;
+            --light: #1A1A1A;
+            --dark: #F8F9FA;
+            --text-color: #F8F9FA;
+            --body-bg: #121212;
+            --card-bg: #1E1E1E;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: var(--transition);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .last-updated {
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 30px 0 15px 0;
+            font-size: 1.5rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 25px 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(76, 175, 80, 0.05);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .contact-info {
+            background: rgba(33, 150, 243, 0.1);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin: 30px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="IMG-20251123-WA0016.jpg" alt="IMOSTAR7 Logo" class="logo-img">
+                <div class="logo-text">IMOSTAR7</div>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: January 2025</p>
+        </div>
+
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Welcome to IMOSTAR7 Design Portfolio. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+            <p>Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+        </div>
+
+        <div class="section">
+            <h2>Information We Collect</h2>
+
+            <h3>Personal Information</h3>
+            <p>We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Contact us through our contact forms</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Request our services</li>
+                <li>Interact with us on social media</li>
+            </ul>
+            <p>The personal information we collect may include:</p>
+            <ul>
+                <li>Name and contact details (email address, phone number)</li>
+                <li>Company/organization name</li>
+                <li>Project requirements and preferences</li>
+                <li>Any other information you choose to provide</li>
+            </ul>
+
+            <h3>Automatically Collected Information</h3>
+            <p>When you visit our website, we automatically collect certain information about your device and browsing activities, including:</p>
+            <ul>
+                <li>IP address and general location information</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Pages you visit and time spent on pages</li>
+                <li>Referring website addresses</li>
+                <li>Date and time of access</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How We Use Your Information</h2>
+            <p>We use the information we collect for various purposes, including:</p>
+            <ul>
+                <li>To provide and maintain our services</li>
+                <li>To respond to your inquiries and provide customer support</li>
+                <li>To send you marketing and promotional communications (with your consent)</li>
+                <li>To improve our website and user experience</li>
+                <li>To analyze how users interact with our website</li>
+                <li>To prevent fraudulent activities and enhance security</li>
+                <li>To comply with legal obligations</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Cookies and Tracking Technologies</h2>
+            <p>We use cookies and similar tracking technologies to track activity on our website and store certain information. Cookies are files with small amounts of data that may include an anonymous unique identifier.</p>
+
+            <h3>Types of Cookies We Use</h3>
+            <ul>
+                <li><strong>Essential Cookies:</strong> Required for the basic functionality of our website</li>
+                <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website</li>
+                <li><strong>Preference Cookies:</strong> Remember your preferences and settings</li>
+                <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements</li>
+            </ul>
+
+            <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
+        </div>
+
+        <div class="section">
+            <h2>Data Sharing and Disclosure</h2>
+            <p>We may share your information in the following situations:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> With third-party vendors who perform services on our behalf</li>
+                <li><strong>Business Transfers:</strong> In connection with any merger or sale of company assets</li>
+                <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+                <li><strong>With Your Consent:</strong> For any other purpose disclosed by us when you provide the information</li>
+            </ul>
+
+            <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties without your consent, except as described in this Privacy Policy.</p>
+        </div>
+
+        <div class="section">
+            <h2>Data Security</h2>
+            <p>We implement appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please also remember that we cannot guarantee that the internet itself is 100% secure.</p>
+            <p>We have implemented the following security measures:</p>
+            <ul>
+                <li>Secure socket layer (SSL) technology</li>
+                <li>Regular security assessments</li>
+                <li>Limited access to personal information</li>
+                <li>Secure data storage practices</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Your Data Protection Rights</h2>
+            <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+            <ul>
+                <li><strong>Access:</strong> The right to request copies of your personal data</li>
+                <li><strong>Rectification:</strong> The right to have inaccurate data corrected</li>
+                <li><strong>Erasure:</strong> The right to have your data deleted</li>
+                <li><strong>Restriction:</strong> The right to limit how we use your data</li>
+                <li><strong>Portability:</strong> The right to receive your data in a portable format</li>
+                <li><strong>Objection:</strong> The right to object to certain data processing</li>
+            </ul>
+
+            <p>To exercise any of these rights, please contact us using the information provided below.</p>
+        </div>
+
+        <div class="section">
+            <h2>Third-Party Links</h2>
+            <p>Our website may contain links to other websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
+            <p>We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+        </div>
+
+        <div class="section">
+            <h2>Children's Privacy</h2>
+            <p>Our website is not intended for children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us.</p>
+        </div>
+
+        <div class="section">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+            <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> imanoniyangi5@gmail.com</li>
+                <li><strong>Phone:</strong> 09127161200</li>
+                <li><strong>Address:</strong> No.57 Aderemi Adeleye street, GRA Ilorin Kwara state</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference or respect OS preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'))) {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
