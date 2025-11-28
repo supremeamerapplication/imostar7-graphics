@@ -1,0 +1,23 @@
+{
+  "name": "IMOSTAR7 Graphic Designer",
+  "short_name": "IMOSTAR7",
+  "description": "Professional Graphic Designer Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4CAF50",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "IMG-20251128-WA0016.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "IMG-20251128-WA0016.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "categories": ["design", "art", "portfolio"]
+}
